@@ -1,3 +1,4 @@
+// __tests__/About.test.js
 import React from "react";
 import { render, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
@@ -12,10 +13,10 @@ describe("About component", () => {
   });
 
   // Second Test
-  it('matches snapshot DOM node structure', () => {
+  it("matches snapshot DOM node structure", () => {
     // render About
+    const { asFragment } = render(<About />);
+
+    expect(asFragment()).toMatchSnapshot();
   });
 });
-
-const { asFragment } = render(<About />);
-expect(asFragment()).toMatchSnapshot();

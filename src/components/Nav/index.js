@@ -16,14 +16,15 @@ function Nav() {
     },
   ];
 
-  const handleClick = () => {
-    console.log("clicked handled");
+  const handleClick = (item) => {
+    console.log(item);
+    return item;
   };
 
   return (
     <header>
       <h2>
-        <a href="/">
+        <a data-testid="link" href="/">
           <span role="img" aria-label="camera">
             📸
           </span>
