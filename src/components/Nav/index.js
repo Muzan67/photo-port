@@ -18,13 +18,13 @@ function Nav() {
 
   const handleClick = (item) => {
     console.log(item);
-    return item;
+    return item
   };
 
   return (
     <header>
       <h2>
-        <a data-testid="link" href="/">
+      <a data-testid="link" href="/">
           <span role="img" aria-label="camera">
             📸
           </span>
@@ -34,7 +34,7 @@ function Nav() {
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
-            <a href="#about" onClick={() => handleClick()}>
+          <a data-testid="about" href="#about" onClick={() => handleClick()}>
               About me
             </a>
           </li>
