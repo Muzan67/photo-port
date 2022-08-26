@@ -20,7 +20,7 @@ describe("Galery component", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("renders", () => {
+  it("rendersthe", () => {
     const { getByTestId } = render(<Gallery currentCategory={portrait} />);
     expect(getByTestId("h1tag")).toHaveTextContent("Portraits");
   });
