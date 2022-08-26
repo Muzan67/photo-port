@@ -1,6 +1,6 @@
 // __tests__/Nav.test.jsn with hard coded categories
 import React from "react";
-import { render, cleanup } from "@testing-library/react";
+import { render, cleanup, } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import Nav from "..";
 
@@ -25,7 +25,7 @@ describe("emoji is visible", () => {
     // Arrange
     const { getByLabelText } = render(<Nav />);
     // Assert
-    expect(getByLabelText("camera")).toHaveTextContent("📸");
+    expect(screen.getByLabelText("camera")).toHaveTextContent("📸");
   });
 });
 
